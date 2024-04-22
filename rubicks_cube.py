@@ -33,17 +33,22 @@ class RubiksCube:
             return [list(row)[::-1] for row in zip(*face)]
 
     def load_state(self, file_path):
-        with open(file_path, 'r') as file:
-            new_state = {}
-            face = None
-            for line in file:
-                parts = line.strip().split()
-                if len(parts) == 1:
-                    face = parts[0].replace(':', '')
-                    new_state[face] = []
-                elif face:
-                    new_state[face].append(parts)
-            self.cube_state = new_state
+        try:
+            with open(file_path, 'r') as file:
+                new_state = {}
+                face = None
+                for line in file:
+                    parts = line.strip().split()
+                    if len(parts) == 1:
+                        face = parts[0].replace(':', '')
+                        new_state[face] = []
+                    elif face:
+                        new_state[face].append(parts)
+                self.cube_state = new_state
+        except FileNotFoundError:
+            print("El archivo especificado no se encontró.")
+        except Exception as e:
+            print("Error al cargar el estado del cubo:", e)
 
     def up(self, prime=False):
         # Rotate the top face
@@ -90,12 +95,18 @@ class RubiksCube:
         # Parse the move
         face, prime = self.parse_move(move)
 
-        # Apply the move
-        getattr(self, face)(prime)
+        # Apply the move if it's valid
+        if face in self.cube_state:
+            getattr(self, face)(prime)
+        else:
+            print("Movimiento no válido:", move)
 
     def undo_move(self, move):
         # Parse the move
         face, prime = self.parse_move(move)
 
-        # Undo the move
-        getattr(self, face)(not prime)
+        # Undo the move if it's valid
+        if face in self.cube_state:
+            getattr(self, face)(not prime)
+        else:
+            print("Movimiento no válido:", move)

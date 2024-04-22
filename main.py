@@ -52,8 +52,8 @@ def depth_first_search(cube, path=[], seen_states=set()):
 def main():
     # Load the cube state from a file
     #cube = RubiksCube('C:\\Otros\\Mio2\\Tasks\\Task1\\Rubick\\cube_state.txt')
-    
-    cube = RubiksCube('/Users/antonio/Documents/SI/SI_Taks/Rubick/cube_state.txt')
+    #cube = RubiksCube('/Users/antonio/Documents/SI/SI_Taks/Rubick/cube_state2.txt')
+    cube = RubiksCube('/Users/antonio/Documents/SI/Rubick_Project/Rubick_Project/cube_state2.txt')
 
     # Find a solution
     solution = depth_first_search(cube)

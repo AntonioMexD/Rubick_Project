@@ -1,18 +1,18 @@
 up: yellow yellow yellow
     yellow yellow yellow
     yellow yellow yellow
-front: green  green  green
-       green  green  green
-       green  green  green
-right: red    red    red
-       red    red    red
-       red    red    red¡
-back: blue   blue   blue
-      blue   blue   blue
-      blue   blue   blue
+front: green green green
+       green green green
+       green green green
+right: red red red
+       red red red
+       red red red
+back: blue blue blue
+      blue blue blue
+      blue blue blue
 left: orange orange orange
       orange orange orange
       orange orange orange
-down: white  white  white
-      white  white  white
-      white  white  white
+down: white white white
+      white white white
+      white white white
