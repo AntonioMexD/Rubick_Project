@@ -13,6 +13,7 @@ This project is a Rubik's Cube solver implemented in Python. It utilizes a depth
 
 Python 3.x
 Standard Python libraries
+
 4. User Manual
 
 4.1 Encoding Format to Load Cube State from Text File
@@ -53,6 +54,7 @@ Open a terminal and navigate to the directory where the code is located.
 Run the program using the following command:
 python main2.py
 Follow the instructions provided in the console.
+
 5. Design and Implementation
 
 5.1 Problem Model
