@@ -19,13 +19,31 @@ Standard Python libraries
 The text file cube_state.txt should follow the following format:
 
 makefile
-Copy code
-Up: color color color
-Front: color color color
-Right: color color color
-Back: color color color
-Left: color color color
-Down: color color color
+up:
+<color1> <color2> <color3>
+<color4> <color5> <color6>
+<color7> <color8> <color9>
+front:
+<color1> <color2> <color3>
+<color4> <color5> <color6>
+<color7> <color8> <color9>
+left:
+<color1> <color2> <color3>
+<color4> <color5> <color6>
+<color7> <color8> <color9>
+right:
+<color1> <color2> <color3>
+<color4> <color5> <color6>
+<color7> <color8> <color9>
+down:
+<color1> <color2> <color3>
+<color4> <color5> <color6>
+<color7> <color8> <color9>
+back:
+<color1> <color2> <color3>
+<color4> <color5> <color6>
+<color7> <color8> <color9>
+
 Where color represents the color of each cell in a row of a face of the cube.
 
 4.2 Instructions to Execute the Program
@@ -33,9 +51,7 @@ Download the source code from the repository.
 Ensure you have Python 3.x installed on your system.
 Open a terminal and navigate to the directory where the code is located.
 Run the program using the following command:
-css
-Copy code
-python main.py
+python main2.py
 Follow the instructions provided in the console.
 5. Design and Implementation
 
@@ -54,5 +70,3 @@ No linguistic models were used in this project.
 Implement more advanced search algorithms, such as breadth-first search or A* search.
 Improve the efficiency of the solver for larger cubes.
 Develop a graphical user interface (GUI) for a better user experience.
-Incorporate additional functionalities, such as the ability to generate random cubes.
-This project is under constant development, and further features and enhancements are expected to be added in the future.
